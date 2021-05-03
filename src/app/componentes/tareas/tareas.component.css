@@ -1,4 +1,10 @@
 .card{
   text-align: center;
-  color: rgb(97, 84, 84);
+  color: white;
+  background-color: rgba(3, 64, 80, 0.884);
+}
+
+.form-control {
+  text-align: center;
+  font-size: 1.2rem;
 }
