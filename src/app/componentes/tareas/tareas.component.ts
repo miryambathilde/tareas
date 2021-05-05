@@ -18,4 +18,17 @@ export class TareasComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //este metodo se ejecutará cafa vez que el usuario agrege algo en el input del form y haga enter
+  agregarTarea() {
+    //crear un objeto tarea, donde la const tarea es igual a Tarea, y declaramos las propiedades nombre y estado
+    const tarea: Tarea = {
+      nombre: this.nombreTarea,
+      estado: false
+    }
+    //agregar el objeto tarea al array, declaramos listaTareas con el metodo push que nos permite agregar elementos al final de la lista y le pasamos tarea
+    this.listaTareas.push(tarea);
+    //resetear el input del formulario, aqui declaramos nombreTarea como array vacío
+    this.nombreTarea = '';
+  }
+
 }
