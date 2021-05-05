@@ -30,5 +30,12 @@ export class TareasComponent implements OnInit {
     //resetear el input del formulario, aqui declaramos nombreTarea como array vacío
     this.nombreTarea = '';
   }
+  /* metodo eliminar tarea al darle al icono de la papelera */
+  /* el metodo va a recibir un index de tipo numero que no devuelve nada (void) */
+  eliminarTarea(index: number): void {
+    /* le pasamos a listaTareas el metodo splice, donde le decimos que empiece a eliminar desde indice 1 elemento */
+    /*El método splice cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos. */
+    this.listaTareas.splice(index, 1);
+  }
 
 }
