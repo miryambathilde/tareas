@@ -6,7 +6,7 @@
       <input type="text" [(ngModel)]="nombreTarea" (keyup.enter)="agregarTarea()" class="form-control form-control-lg" placeholder="Introduce tus tareas...">
     </div>
     <div class="col-lg-6 offset-lg-3  mt-3">
-      <div class="card p-2">
+      <div *ngIf="listaTareas.length === 0" class="card p-2">
         <h6>No tienes tareas pendientes</h6>
       </div>
       <!-- AÑADIMOS LISTADO DE TAREAS para iterar el listaTareas que tenemos en tareas.component.ts para ir agregando y mostrando las distintas tareas:-->
