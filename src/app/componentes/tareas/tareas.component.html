@@ -1,7 +1,8 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <input type="text" [ngModel] class="form-control form-control-lg" placeholder="Introduce tus tareas...">
+      <!-- directiva [ngModel] es igual a nombreTarea que viene de tareas.component.ts-->
+      <input type="text" [(ngModel)]="nombreTarea" class="form-control form-control-lg" placeholder="Introduce tus tareas...">
     </div>
     <div class="col-lg-6 offset-lg-3  mt-3">
       <div class="card p-2">

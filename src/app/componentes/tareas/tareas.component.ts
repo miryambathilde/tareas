@@ -10,7 +10,7 @@ import { Tarea } from 'src/app/models/tarea';
 export class TareasComponent implements OnInit {
   /* declaramos dos variables, lista de tareas que será un array de tareas vacío*/
   /* declaramos nombreTarea que será el array del campo input de tareas */
-  listTareas: Tarea [] = [];
+  listaTareas: Tarea [] = [];
   nombreTarea = '';
 
   constructor() { }
