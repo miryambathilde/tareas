@@ -11,11 +11,16 @@
       </div>
       <!-- USAMOS DIRECTIVA *NGFOR para iterar el listado de tareas con let tarea of listaTareas e interpolamos el objeto tarea y de la tarea queremos la propiedad nombre-->
       <!-- añadimos let i = index para conseguir la posición de cada uno de los elementos del índice listaTareas -->
-      <!-- añadimos metodo actualizarTarea y le pasamos indice y tarea  -->
-      <ul class="list-group" (click)="actualizarTarea(index, tarea)">
+      <ul class="list-group">
         <li *ngFor="let tarea of listaTareas; let i = index" class="list-group-item d-flex justify-content-between">
-          <span class="cursor">
-            <i class="far fa-circle"></i>
+          <!-- añadimos metodo actualizarTarea y le pasamos indice y tarea  -->
+          <span class="cursor"  (click)="actualizarTarea(i, tarea)">
+            <!-- usamos directiva NgClass con operador ternario, le decimos que si el estado de la tarea es verdadero use el
+              icono del check, en caso contrario el circulo sin check -->
+              <!-- le indicamos que cuando el estado sea verdadero se ponga en verde con: class.text-success="tarea.estado -->
+            <i [class.text-success]="tarea.estado" [ngClass]="tarea.estado ? 'fas fa-check-circle' : 'far fa-circle'"></i>
+            <!-- <i class="far fa-circle"></i>
+            <i class="fas fa-check-circle"></i> -->
           </span>
           {{ tarea.nombre }}
           <!-- añadimos el evento click con el metodo eliminarTarea y le pasamos el indice del array -->

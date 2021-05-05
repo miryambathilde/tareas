@@ -12,8 +12,6 @@ export class TareasComponent implements OnInit {
   /* declaramos nombreTarea que será el array del campo input de tareas */
   listaTareas: Tarea [] = [];
   nombreTarea = '';
-  tarea: any;
-  index!: number;
 
   constructor() { }
 
@@ -34,7 +32,7 @@ export class TareasComponent implements OnInit {
   }
   /* METODO ACTUALIZAR TAREA */
   /* el metodo actualizarTarea va a recibir una tarea del tipo tarea y un index del tipo number y no devuelve nada */
-  actualizarTarea (index: number, tarea: Tarea): void {
+  actualizarTarea(index: number,tarea: Tarea): void {
     /* del objeto listado de tarea, vamos a acceder al indice, y le vamos a decir que el estado de la tarea será el contrario al de inicio,
     es decir pasara de false, que es el que hay por defecto a TRUE*/
     this.listaTareas[index].estado = !tarea.estado
