@@ -11,10 +11,17 @@
       </div>
       <!-- AÑADIMOS LISTADO DE TAREAS para iterar el listaTareas que tenemos en tareas.component.ts para ir agregando y mostrando las distintas tareas:-->
       <!-- USAMOS DIRECTIVA *NGFOR para iterar el listado de tareas con let tarea of listaTareas e interpolamos el objeto tarea y de la tarea queremos la propiedad nombre-->
-      <!-- añadimos al final icono papelera <span><i class="fas fa-trash-alt"></i></span> -->
       <!-- AÑADIMOS a LIST-GROUP-ITEM d-flex justify-content-between. FLEX BOOTSTRAP -->
       <ul class="list-group">
-        <li *ngFor="let tarea of listaTareas" class="list-group-item d-flex justify-content-between"><span><i class="far fa-circle"></i></span> {{ tarea.nombre }} <span><i class="fas fa-trash-alt"></i></span></li>
+        <li *ngFor="let tarea of listaTareas" class="list-group-item d-flex justify-content-between">
+          <span class="cursor">
+            <i class="far fa-circle"></i>
+          </span>
+          {{ tarea.nombre }}
+          <span class="cursor">
+            <i class="fas fa-trash-alt"></i>
+          </span>
+        </li>
       </ul>
     </div>
   </div>
